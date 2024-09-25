@@ -11,7 +11,7 @@ int main()
 
 	printf("enter your first name: \n");
 	scanf(" %s", first_name);
-	printf("enter your last name: \n");
+	printf("enter your last name: \n")l;
 	scanf(" %s", last_name);
 	printf("enter your age: \n");
 	scanf(" %d", &age);
