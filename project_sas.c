@@ -217,24 +217,6 @@ void search_reserve_by_id()
         printf("No reservation with that id.\n");
     }
 }
-void sort_reserves_by_id()
-{
-    for (int i = 0; i < NB_Reserve - 1; i++) 
-    {
-        for (int j = 0; j < NB_Reserve - i - 1; j++) 
-        {
-            if ((j + 1) > (j + 2)) 
-            {
-                char temp_name[MAX_NAME_LEN];
-                strcpy(temp_name, names[j]);
-                strcpy(names[j], names[j + 1]);
-                strcpy(names[j + 1], temp_name);
-            }
-        }
-    }
-    display_reserve();
-    printf("Reservations sorted by id!!!!!!\n");
-}
 
 void search_reserve_by_name() 
 {
@@ -342,10 +324,9 @@ int main()
         printf("5. Search Reservation by id\n");
         printf("6. Search Reservation by Name\n");
         printf("7. Sort Reservations by Name\n");
-        printf("8. Sort Reservations by id\n");
-        printf("9. Statistics - Age Group\n");
-        printf("10. Statistics - Reservation Status\n");
-        printf("11. Exit\n");
+        printf("8. Statistics - Age Group\n");
+        printf("9. Statistics - Reservation Status\n");
+        printf("10. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -379,17 +360,13 @@ int main()
         }
         else if (choice == 8) 
         {
-            sort_reserves_by_id();
+            calculate_age_statistics();
         }
         else if (choice == 9) 
         {
-            calculate_age_statistics();
-        }
-        else if (choice == 10) 
-        {
             calculate_status_statistics();
         }
-        else if (choice == 11) 
+        else if (choice == 10) 
         {
             printf("Exiting program.\n");
         }
