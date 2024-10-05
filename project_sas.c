@@ -12,7 +12,7 @@ void sort_reserves_by_name();
 void calculate_age_statistics();
 void calculate_status_statistics();
 
-#define MAX_RESERVE 50
+#define MAX_RESERVE 80
 #define MAX_NAME_LEN 35
 #define MAX_PHONE_LEN 15
 #define MAX_STATUS_LEN 20
