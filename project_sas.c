@@ -9,8 +9,8 @@ void search_reserve_by_id();
 void search_reserve_by_name();
 void display_elements();
 void sort_reserves_by_name();
-void calculate_age_statistics();
-void calculate_status_statistics();
+void calcul_age_statistics();
+void calcul_status_statistics();
 
 #define MAX_RESERVE 80
 #define MAX_NAME_LEN 35
@@ -247,19 +247,24 @@ void search_reserve_by_name()
 }
 
 
-void calculate_age_statistics()
+void calcul_age_statistics()
 {
     int count_0_18 = 0, count_19_35 = 0, count_36_plus = 0;
     int total_age = 0;
 
-    for (int i = 0; i < NB_Reserve; i++) {
+    for (int i = 0; i < NB_Reserve; i++) 
+    {
         total_age += ages[i];
 
-        if (ages[i] <= 18) {
+        if (ages[i] <= 18) 
+        {
             count_0_18++;
-        } else if (ages[i] <= 35) {
+        } else if (ages[i] <= 35) 
+        {
             count_19_35++;
-        } else {
+        } 
+        else 
+        {
             count_36_plus++;
         }
     }
@@ -279,7 +284,7 @@ void calculate_age_statistics()
     printf("36+ years: %d patients\n", count_36_plus);
 }
 
-void calculate_status_statistics()
+void calcul_status_statistics()
 {
     int count_validated , count_postponed , count_canceled , count_processed = 0;
 
@@ -314,7 +319,7 @@ int main()
 {
     display_elements();
     int choice = 0;
-    while (choice != 11)
+    while (choice != 10)
     {
         printf("\nMenu:\n");
         printf("1. Add Reservation\n");
@@ -324,8 +329,8 @@ int main()
         printf("5. Search Reservation by id\n");
         printf("6. Search Reservation by Name\n");
         printf("7. Sort Reservations by Name\n");
-        printf("8. Statistics - Age Group\n");
-        printf("9. Statistics - Reservation Status\n");
+        printf("8. Statistics - Age_group\n");
+        printf("9. Statistics_Reservation_Status\n");
         printf("10. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
