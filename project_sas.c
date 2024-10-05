@@ -269,11 +269,14 @@ void calcul_age_statistics()
         }
     }
 
-    double average_age;
+    int average_age;
 
-    if (NB_Reserve > 0) {
-        average_age = (double)total_age / NB_Reserve;
-    } else {
+    if (NB_Reserve > 0) 
+    {
+        average_age = total_age / NB_Reserve;
+    }
+    else 
+    {
         average_age = 0.0;
     }
 
@@ -365,11 +368,11 @@ int main()
         }
         else if (choice == 8) 
         {
-            calculate_age_statistics();
+            calcul_age_statistics();
         }
         else if (choice == 9) 
         {
-            calculate_status_statistics();
+            calcul_status_statistics();
         }
         else if (choice == 10) 
         {
